@@ -1,0 +1,18 @@
+python-dotenv
+openai
+langchain
+langchain-openai
+langchain-community
+langchain-experimental
+langchain-chroma
+langgraph
+pydantic
+PyMuPDF # fitz
+tavily-python
+tiktoken
+deepeval
+pytest
+# Add deepeval when you write your tests
+# deepeval
+# Add any other specific dependencies you might have used implicitly
+# e.g., beautifulsoup4 if Tavily uses it indirectly, etc.

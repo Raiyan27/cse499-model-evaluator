@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# IDE folders
+.idea/
+.vscode/
+
+# Database folder (optional, if you don't want to commit the DB)
+chroma_db/
+
+# Output files / Logs
+*.log
+rag_agent_graph.png
+clarification_agent_graph.png
