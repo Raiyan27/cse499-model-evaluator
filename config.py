@@ -14,7 +14,7 @@ CLARIFICATION_GRAPH_IMAGE_PATH = "clarification_agent_graph.png"
 EMBEDDING_MODEL_NAME = "text-embedding-3-large"
 EMBEDDING_BATCH_SIZE = 100 # Adjust if needed for testing environment
 MAX_DOCS_PER_QUERY = 5
-MINIMUN_RETRIVAL_SCORE = 0.4 # Adjust based on testing
+MINIMUN_RETRIVAL_SCORE = 0.3 # Adjust based on testing
 
 # LLM Models
 CLARIFICATION_ASSESSMENT_MODEL = "gpt-4o-mini"
