@@ -1,0 +1,19 @@
+
+test_cases_data = [
+    (
+        "RTI_Scenario_1", 
+        "Imagine a scenario where all citizens effectively utilize the RTI Act. How might this empowerment transform civic engagement and government transparency in Bangladesh?", 
+        "Effective use of the RTI Act by all citizens in Bangladesh would likely lead to significantly increased government accountability and transparency. Citizens could monitor public projects, scrutinize spending, and demand better services. This empowerment fosters active civic participation, potentially reducing corruption and improving governance. It creates a more informed public, strengthening democratic processes.",
+
+    ),
+    (
+        "Company_Reg_Basic",
+        "Tell me about company registration in Bangladesh.",
+        "Company registration in Bangladesh is primarily handled by the Registrar of Joint Stock Companies and Firms (RJSC). Key types include Private Limited Companies, Public Limited Companies, and Branch Offices. The process involves name clearance, submitting incorporation documents (Memorandum and Articles of Association), paying fees, and obtaining a certificate of incorporation. Specific requirements depend on the company type.",
+    ),
+    (
+        "Vague_Land_Law",
+        "ভূমি আইন", "Land Law" 
+        "Bangladesh has numerous laws related to land, including acquisition, ownership, mutation, taxation, and dispute resolution. Key acts include the State Acquisition and Tenancy Act, Non-Agricultural Tenancy Act, and Land Development Tax Ordinance. Specific information depends heavily on the particular aspect of land law you are interested in, such as inheritance, purchase, leasing, or specific regional rules.",
+    ),
+]

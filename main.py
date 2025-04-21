@@ -14,7 +14,7 @@ from agents import (
     get_agentic_rag_app,
     ClarificationState,
     RAGGraphState,
-    try_save_graph_image # Optional image saving
+    try_save_graph_image
 )
 
 
@@ -124,7 +124,7 @@ def run_legal_assistant_conversation(initial_query: str, max_clarification_attem
 
     # --- Clarification Loop ---
     while turn < max_clarification_attempts:
-        print(f"\n\n\n\n\nClarification Turn {turn + 1}/{max_clarification_attempts}")
+        print(f"\n\nClarification Turn {turn + 1}/{max_clarification_attempts}")
         input_state = ClarificationState(
             initial_query=initial_query,
             conversation_history=current_history,
@@ -246,7 +246,7 @@ def run_legal_assistant_conversation(initial_query: str, max_clarification_attem
         clarified_query = initial_query
         clarification_log.append({"role": "system", "content": f"[Max turns reached, fallback to initial query: {initial_query}]"})
 
-    print("\n\n\n\n\n--- Moving to RAG Agent ---")
+    print("\n\n--- Moving to RAG Agent ---")
     print(f"Using Query: {clarified_query}")
     print("-" * 30)
 
@@ -267,7 +267,7 @@ def run_legal_assistant_conversation(initial_query: str, max_clarification_attem
         # *** ADD THIS LINE TO GET THE DOCUMENTS USED FOR GENERATION ***
         final_context_docs = final_rag_state.get("documents", []) # Get the list of Document objects
 
-        print("\n\n\n\n\n--- RAG Agent Finished ---")
+        print("\n--- RAG Agent Finished ---")
         print(f"Final Answer:\n\n\n\n\n{final_answer}")
 
         # *** MODIFY THE RETURN DICTIONARY ***
@@ -310,7 +310,7 @@ if __name__ == "__main__":
         test_query = "Imagine a scenario where all citizens effectively utilize the RTI Act. How might this empowerment transform civic engagement and government transparency in Bangladesh?"
         # test_query = "ভূমি আইন" # Very vague query to test clarification
 
-    print(f"\n\n\n\n\nRunning assistant for query: '{test_query}'\n")
+    print(f"\n\nRunning assistant for query: '{test_query}'\n")
     result = run_legal_assistant_conversation(test_query)
 
     print("\n\n\n\n\n" + "="*50)
@@ -319,7 +319,7 @@ if __name__ == "__main__":
     if result['error_message']:
         print(f"Error: {result['error_message']}")
     print(f"Clarified Query Used for RAG: {result['clarified_query']}")
-    print("\n\n\n\n\nFinal Answer:")
+    print("\nFinal Answer:")
     print(result['final_answer'])
     print("="*50)
 

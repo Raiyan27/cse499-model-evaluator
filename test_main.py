@@ -1,8 +1,15 @@
 import pytest
 from deepeval import assert_test, evaluate
 from deepeval.test_case import LLMTestCase, LLMTestCaseParams
-from deepeval.metrics import GEval
+from deepeval.metrics import GEval, AnswerRelevancyMetric, FaithfulnessMetric
 from main import run_legal_assistant_conversation, initialize_resources
+
+# Imports for context retrival evaluation
+from deepeval.metrics import (
+    ContextualPrecisionMetric,
+    ContextualRecallMetric,
+    ContextualRelevancyMetric
+)
 
 @pytest.fixture(scope="session", autouse=True) 
 def setup_resources():
@@ -29,7 +36,8 @@ def test_correctness():
         name="Correctness",
         criteria="Determine if the 'actual output' is correct and relevant based on the 'expected output', considering the medical nature of the 'input' query.",
         evaluation_params=[LLMTestCaseParams.INPUT, LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.EXPECTED_OUTPUT], # Include INPUT for better context
-        threshold=0.5 # Adjust threshold as needed
+        threshold=0.5,# Adjust threshold as needed
+        model="gpt-4o-mini",
     )
 
     test_case = LLMTestCase(

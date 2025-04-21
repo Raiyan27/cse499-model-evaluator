@@ -23,7 +23,7 @@ RAG_LLM_MODEL = "gpt-4o-mini"
 REWRITER_LLM_MODEL = "gpt-4o-mini" # Can be same or different
 
 # Agent Settings
-MAX_QUERY_CLARIFICATION_TURNS = 5 # Lower for testing? Or keep original
+MAX_QUERY_CLARIFICATION_TURNS = 1 # Lower for testing? Or keep original
 TAVILY_MAX_RESULTS = 3
 TAVILY_SEARCH_DEPTH = 'advanced'
 TAVILY_MAX_TOKENS = 10000 # Max tokens for Tavily search result content

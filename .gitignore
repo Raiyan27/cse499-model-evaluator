@@ -18,3 +18,7 @@ chroma_db/
 *.log
 rag_agent_graph.png
 clarification_agent_graph.png
+# Deepeval files
+.deepeval
+.deepeval_telemetry.txt
+.deepeval-cache.json
